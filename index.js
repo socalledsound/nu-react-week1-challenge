@@ -1,7 +1,4 @@
-// const getRandomColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`
 const getRandomColor = () => `#${Math.floor(Math.random() * 2 ** 24).toString(16).padStart(6, "0")}`
-// const getRandomPosition = (min, max) => `${min + Math.random() * (max - min)}px` 
-// const getRandomSize = (min, max) => `${min + Math.random() * (max - min)}px` 
 const getRandomVal = (min, max) => `${min + Math.random() * (max - min)}px`
 
 const makeCircle = (x, y, color, size) => {
@@ -16,27 +13,23 @@ const makeCircle = (x, y, color, size) => {
     return circle
 }
 
-const makeCirclesArray = (num, minR, maxR, pad) => {
-    const circles = Array.from({ length : num}, () => {
-        const color = getRandomColor()
-        // const x = getRandomPosition(pad, window.innerWidth - pad)
-        // const y = getRandomPosition(pad, window.innerHeight - pad)
-        // const size = getRandomSize(minR, maxR)
-        const x = getRandomVal(pad, window.innerWidth - pad - maxR)
-        const y = getRandomVal(pad, window.innerHeight - pad - maxR)
-        const size = getRandomVal(minR, maxR)
-        const circle = makeCircle(x, y, color, size)
-        return circle
-    })
-    return circles
-}
 
+const root = document.getElementById('root')
 const numCircles = 100;
 const padding = 200;
 const minCircleSize = 10;
 const maxCircleSize = 100;
 
+// create a function called makeCirclesArray that uses Array.from to return an array of circles!
+// you'll use the functions above, and Array.from to create the array of circles.
+// i'll get you started: 
+// const makeCirclesArray = (num, minCircleR, maxCircleR, padding ) => {
+//        const circles = Array.from({ length: num}, () => {
+//              //call makeCircle here!
+//      })
+//  return circles
+//}
 const circles = makeCirclesArray(numCircles, minCircleSize, maxCircleSize, padding)
 console.log(circles)
-const root = document.getElementById('root')
-circles.map( item => root.appendChild(item))
+
+
