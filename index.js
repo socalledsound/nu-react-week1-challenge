@@ -22,10 +22,14 @@ const maxCircleSize = 100;
 
 // create a function called makeCirclesArray that uses Array.from to return an array of circles!
 // you'll use the functions above, and Array.from to create the array of circles.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+// Array.from is awesome, you can pass in a config object which optionally takes a length value
+// and then a function to generate each item in an array.
 // i'll get you started: 
 // const makeCirclesArray = (num, minCircleR, maxCircleR, padding ) => {
 //        const circles = Array.from({ length: num}, () => {
-//              //call makeCircle here!
+                // use the functions above to generate a color and position and size    
+//              //then call makeCircle with those values here!
 //      })
 //  return circles
 //}
